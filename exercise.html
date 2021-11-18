@@ -10,22 +10,42 @@
 
 
     <script>
+        function toUpper(stringArr) {
+            let result = [];
 
-        let month = 'November ';
-        let day = '17 ';
-        let year = '2021';
+            stringArr.forEach(function (str) {
+                result.push(str.toUpperCase());
+            });
 
-        let math1 = 4 + 5 * 3;
-        let math2 = (4 + 5) * 3;
+            console.log(result);
+        }
+        toUpper(['hello', 'world']);
 
-        let age = 22;
-        let message = 'I am ' + age + ' years old and growing!'
 
-        let button = document.createElement('button');
-        button.innerText = "Click Me";
-        document.body.appendChild(button);
+        function arrayDouble(stringArr) {
+            let result = [];
 
-        document.title = "New Title";
+            stringArr.forEach(function (str) {
+                result.push(str);
+                result.push(str);
+            });
+
+            console.log(result);
+        }
+        arrayDouble(['bark', 'meow']);
+
+        function arraySum(numArray) {
+            let total = 0
+
+            numArray.forEach(function (num) {
+                total = total + num;
+            });
+            console.log(total);
+
+        }
+        arraySum([1, 2, 3]);
+        arraySum([5, -2, 7, 0]);
+
 
     </script>
 
