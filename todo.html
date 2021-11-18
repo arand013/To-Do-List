@@ -5,7 +5,9 @@
 </head>
 
 <body>
-    <button> Press Me </button>
+    <input id="todo-title" type="text" />
+
+    <button onclick="addTodo()"> Add Todo </button>
 
     <script>
 
@@ -18,6 +20,14 @@
             document.body.appendChild(element);
 
         });
+
+        function addTodo() {
+            let textbox = document.getElementById('todo-title');
+            let title = textbox.value;
+
+            todos.push(title);
+
+        }
     </script>
 
 </body>
